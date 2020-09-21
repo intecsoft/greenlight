@@ -71,6 +71,8 @@ Rails.application.config.middleware.use OmniAuth::Builder do
         idp_slo_target_url: ENV['SAML_IDP_SLO_URL'],
         idp_cert_fingerprint: ENV['SAML_IDP_CERT_FINGERPRINT'],
         name_identifier_format: ENV['SAML_NAME_IDENTIFIER'],
+        certificate: File.read( "./cert/" + ENV['SP_CERTIFICATE']),
+        private_key: File.read( "./cert/" + ENV['SP_CERTIFICATE_PRIVATE_KEY']),
         attribute_statements: {
           nickname: [ENV['SAML_USERNAME_ATTRIBUTE'] || 'urn:mace:dir:attribute-def:eduPersonPrincipalName'],
           email: [ENV['SAML_EMAIL_ATTRIBUTE'] || 'urn:mace:dir:attribute-def:mail'],
