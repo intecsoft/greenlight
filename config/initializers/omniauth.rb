@@ -77,7 +77,8 @@ Rails.application.config.middleware.use OmniAuth::Builder do
           name: [ENV['SAML_COMMONNAME_ATTRIBUTE'] || 'urn:mace:dir:attribute-def:cn'],
           roles: [ENV['SAML_ROLES_ATTRIBUTE'] || 'urn:mace:dir:attribute-def:eduPersonAffiliation']
         },
-        uid_attribute: ENV['SAML_UID_ATTRIBUTE']
+        uid_attribute: ENV['SAML_UID_ATTRIBUTE'],
+        single_logout_service_url: "https://bbb.schullogin.de/auth/saml/slo"
     end
   end
 end
