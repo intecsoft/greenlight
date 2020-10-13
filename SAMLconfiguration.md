@@ -90,7 +90,7 @@ The best way is to set SAML_ISSUER variable in .env and then lookup greenlight m
         CHECK_SP_CERT_EXPIRATION is a boolean value that enable or not SP x509 cert expiration check.
                               By default is false. For signaturte recomended value is false.
    For more details check documentation in https://github.com/onelogin/ruby-saml and https://github.com/omniauth/omniauth-saml
-6. All others variables needed to map SAML response fields to the user fields in the Greenlight.
+6. All other variables that are required to map SAML response fields to the user fields in the Greenlight.
 To get all available fields check IdP or record network activity in developer console in your browser. Try to sign in using SAML, copy encoded SAML Response, decode it using [decoder](https://www.samltool.com/decode.php) and map values from the response by name fields to variables in .env
 Example:
 ```xml
