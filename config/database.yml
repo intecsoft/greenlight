@@ -1,5 +1,5 @@
 default: &default
-  pool: 5
+  pool: 9
   timeout: 5000
 
 development:
